@@ -1,0 +1,44 @@
+{
+  "id": "1924784",
+  "name": "generalize",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10837750",
+      "name": "删 除 ",
+      "font_class": "shanchu1",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "11379637",
+      "name": "必填",
+      "font_class": "bitian",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "5131364",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "14763207",
+      "name": "右箭头",
+      "font_class": "ic_arrowr-copy",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7218841",
+      "name": "左箭头",
+      "font_class": "zuojiantou",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>
+        js调用java
+    </title>
+</head>
+
+<body>
+<p>
+    <input type="text" id="la_info" value=""/>
+</p>
+<p>
+    <input type="button" id="enter" value="直接发消息给原生" onclick="testClick();"
+    />
+</p>
+<p>
+    <input type="button" id="enter1" value="调用原生方法" onclick="testClick1();"
+    />
+</p>
+</body>
+<script>
+        function testClick() {
+            //直接发送给原生，并回调展示
+            var data ='h5 info';
+            WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+                    document.getElementById("la_info").value = responseData ;
+                }
+            );
+
+        }
+
+        //发送给原生注册方法，并回调展示
+        function testClick1() {
+            WebViewJavascriptBridge.callHandler(
+                'getFromWeb',
+                {'param':'haha get from web'},
+                function(responseData){
+                    document.getElementById("la_info").value = responseData ;
+                })
+        }
+
+        function connectWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) {
+                callback(WebViewJavascriptBridge)
+            } else {
+                document.addEventListener(
+                    'WebViewJavascriptBridgeReady'
+                    , function() {
+                        callback(WebViewJavascriptBridge)
+                    },
+                    false
+                );
+            }
+        }
+
+        connectWebViewJavascriptBridge(function(bridge) {
+
+              //默认handler
+            bridge.init(function(message, responseCallback) {
+                var data = {
+                    'Javascript Responds': message +'  send back'
+                };
+
+                if (responseCallback) {
+                    responseCallback(data);
+                }
+            });
+
+            //注册handler
+            bridge.registerHandler("handlerReg", function(data, responseCallback) {
+                if (responseCallback) {
+                    var responseData =data +  "web back";
+                    responseCallback(responseData);
+                }
+            });
+
+            //注册handler2
+            bridge.registerHandler("handlerReg2", function(data, responseCallback) {
+                if (responseCallback) {
+                    var responseData =data +  "web back";
+                    responseCallback(responseData);
+                }
+            });
+
+        })
+
+</script>
+
+</html>
+

@@ -1,0 +1,53 @@
+/* 门店管理弹窗样式 */
+.all > .van-popup,
+.van-popup--right {
+  margin-top: 70px;
+}
+/* 地图部分样式 */
+.search-box-wrapper {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center !important;
+  padding: 0 20px !important;
+}
+.search-box-wrapper input {
+  margin-left: 20px !important;
+  position: relative !important;
+  width: 200px !important;
+  height: 30px !important;
+  border-radius: 10px !important;
+  background: #f2f2f2 !important;
+  font-size: 10px !important;
+  padding-left: 20px;
+}
+
+.search-box-wrapper span {
+  font-size: 12px !important;
+  color: #4080f7;
+  margin-left: 5px;
+  width: 50px !important;
+}
+
+.search-tips {
+  height: 300px;
+  left: 42px;
+  font-size: 10px;
+}
+.map {
+  margin-top: 20px;
+}
+.amap-logo {
+  display: none !important;
+}
+/* 添加管理员关联账号、账号状态样式 */
+.ManageSpecial .van-cell {
+  justify-content: flex-start;
+}
+.ManageSpecial .van-cell .van-cell__title {
+  -webkit-flex: 0 !important;
+  width: 300px !important;
+}
+.ManageSpecial .van-cell .van-cell__title span {
+  display: inline-block;
+  width: 134px;
+}

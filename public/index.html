@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- 这个视口不加的话 页面刷新了根字体会发生变化 第三方样式会变得很小 加了第三方的字体又有点模糊 -->
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      html,
+      body {
+        font-size: 100px;
+      }
+    </style>
+    <!-- oss-sdk -->
+    <script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-5.3.0.min.js"></script>
+  </head>
+
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- 引入 Vue 和 Vant 的 JS 文件 -->
+    <script type="text/javascript">
+      document.addEventListener('plusready', function() {
+        //console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
+      });
+    </script>
+  </body>
+</html>
