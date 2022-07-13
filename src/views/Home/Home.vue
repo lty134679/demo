@@ -19,7 +19,7 @@
       <!-- 我的 -->
       <router-link @click.native="toggle(3)" :to="{ name: 'personal' }" class="right">
         <div class="picture picture3 "></div>
-        <div :class="{ active: active === 3 }" class="text">我的</div>
+        <div :class="{ active: active === 3 }" class="text">我的我的我的我的</div>
       </router-link>
     </div>
   </div>
